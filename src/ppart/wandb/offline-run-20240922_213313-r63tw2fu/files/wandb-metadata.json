@@ -1,0 +1,31 @@
+{
+  "os": "Linux-6.8.0-1015-gcp-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "startedAt": "2024-09-22T21:33:13.677321Z",
+  "program": "/home/luviola/dm2024c/src/ppart/422_lgbm_optuna.py",
+  "codePath": "src/ppart/422_lgbm_optuna.py",
+  "git": {
+    "remote": "https://luviolap:@github.com/luviolap/dm2024c.git",
+    "commit": "4802c29129edb8ba38368a9cceabf3d3dc03b899"
+  },
+  "root": "/home/luviola/dm2024c/src/ppart",
+  "host": "desktop-vivencial.c.handy-record-435221-h4.internal",
+  "username": "luviola",
+  "executable": "/home/luviola/.venv1/bin/python",
+  "codePathLocal": "422_lgbm_optuna.py",
+  "cpu_count": 2,
+  "cpu_count_logical": 4,
+  "disk": {
+    "/": {
+      "total": "65445814272",
+      "used": "48230125568"
+    }
+  },
+  "memory": {
+    "total": "16767324160"
+  },
+  "cpu": {
+    "count": 2,
+    "countLogical": 4
+  }
+}
