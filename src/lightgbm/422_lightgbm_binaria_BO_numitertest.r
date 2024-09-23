@@ -33,7 +33,7 @@ options(error = function() {
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
 
-PARAM$experimento <- "HT4220D"
+PARAM$experimento <- "HT4220C"
 
 PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
 
@@ -41,7 +41,7 @@ PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
 # undersampling de 1.0  implica tomar TODOS los datos
 PARAM$trainingstrategy$undersampling <- 1.0
 
-PARAM$hyperparametertuning$iteraciones <- 150
+PARAM$hyperparametertuning$iteraciones <- 500
 PARAM$hyperparametertuning$xval_folds <- 5
 PARAM$hyperparametertuning$POS_ganancia <- 117000
 PARAM$hyperparametertuning$NEG_ganancia <- -3000
@@ -50,15 +50,26 @@ PARAM$hyperparametertuning$NEG_ganancia <- -3000
 
 # Aqui se cargan los bordes de los hiperparametros
 hs <- makeParamSet(
+  # z
   makeNumericParam("learning_rate", lower = 0.01, upper = 0.3),
-  makeIntegerParam("num_leaves", lower = 20L, upper = 3000L),
-  makeNumericParam("feature_fraction", lower = 0.5, upper = 1.0),
-  makeIntegerParam("min_data_in_leaf", lower = 10L, upper = 10000L),
-  makeNumericParam("bagging_fraction", lower = 0.5, upper = 1.0),
-  makeIntegerParam("bagging_freq", lower = 0L, upper = 50L),
-  makeNumericParam("lambda_l1", lower = 0, upper = 100),
-  makeNumericParam("lambda_l2", lower = 0, upper = 100),
-  makeIntegerParam("envios", lower = 5000L, upper = 15000L)
+  makeIntegerParam("num_leaves", lower = 8L, upper = 1024L),
+  makeNumericParam("feature_fraction", lower = 0.1, upper = 1.0),
+  makeIntegerParam("min_data_in_leaf", lower = 1L, upper = 8000L),
+  makeIntegerParam("envios", lower = 5000L, upper = 15000L),
+  # l
+  makeIntegerParam("max_depth", lower = 3L, upper = 12L), # profundidad max del arbol; controla sobreajuste limitando complejidad del arbol
+  makeNumericParam("lambda_l1", lower = 0, upper = 10), # regularizacion l1 en pesos; mejora generalizacion
+  makeNumericParam("lambda_l2", lower = 0, upper = 10), # regularizacion l2 en pesos; previene sobreajuste, especialmente en datos ruidosos
+  makeNumericParam("bagging_fraction", lower = 0.5, upper = 1.0), # fraccion de datos para usar por iteracion; introduce aleatoridad y puede mejorar robustez
+  makeIntegerParam("bagging_freq", lower = 0L, upper = 10L), # freq para realizar bagging; controla submuestreo
+  makeIntegerParam("min_child_samples", lower = 5L, upper = 100L), # numero min de muestras en nodo hoja
+  makeIntegerParam("max_bin", lower = 200L, upper = 1000L),  # num max de bins para vars continuas; mayor numer = mayor informacion = mayor riesgo de sobreajuste
+  makeNumericParam("subsample", lower = 0.5, upper = 1.0), # fraccion de muestras a usar para entrenar cada arbol; ayuda a reducir sobreajuste y velocidad de entrenamiento
+  makeNumericParam("colsample_bytree", lower = 0.5, upper = 1.0), # fraccion de caracteristicas a considerar en cada arbol; mejora robustez del modelo al introducir variabilidad en caracteristicas
+  makeNumericParam("min_gain_to_split", lower = 0, upper = 15), # ganancia minima requerida para hacer una division; ayuda a controlar complejidad, previene divisiones innecesarias
+  makeIntegerParam("num_iterations", lower = 50L, upper = 1000L) # to pair with learning rate
+  # makeIntegerParam("num_leaves", lower = 8L, upper = 1024L,
+  #                  trafo = function(x) min(x, 2^(getParamSet(hs)$pars$max_depth$upper)))
 )
 
 #------------------------------------------------------------------------------
@@ -141,8 +152,8 @@ EstimarGanancia_lightgbm <- function(x) {
     boost_from_average = TRUE,
     feature_pre_filter = FALSE,
     verbosity = -100,
-    max_bin = 31, # por ahora, lo dejo fijo
-    num_iterations = 9999, # valor grande, lo limita early_stopping_rounds
+    # max_bin = 31, # por ahora, lo dejo fijo
+    # num_iterations = 9999, # valor grande, lo limita early_stopping_rounds
     force_row_wise = TRUE, # para evitar warning
     seed = ksemilla_azar1
   )
@@ -155,14 +166,30 @@ EstimarGanancia_lightgbm <- function(x) {
 
   param_completo <- c(param_basicos, param_variable, x)
 
+  # asegurar que todos los parametros de hs sean incluidos
+  param_completo$max_bin <- x$max_bin
+  param_completo$subsample <- x$subsample
+  param_completo$colsample_bytree <- x$colsample_bytree
+
+  # remove num_iterations
+  nrounds <- x$num_iterations
+  param_completo$null_iterations <- NULL
+
+  # Enforce relationship between num_leaves and max_depth
+  param_completo$num_leaves <- min(param_completo$num_leaves, 2^param_completo$max_depth)
+
   set.seed(ksemilla_azar1)
   modelocv <- lgb.cv(
     data = dtrain,
     eval = fganancia_logistic_lightgbm,
+    nrounds = nrounds,
     stratified = TRUE, # sobre el cross validation
     nfold = kfolds, # folds del cross validation
     param = param_completo,
-    verbose = -100
+    verbose = -100,
+    # early_stopping_rounds = as.integer(50 + 5 / x$learning_rate), # per medium
+    # num_iterations = x$num_iterations # use optimized
+    # num_boost_round = x$num_iterations
   )
 
   # obtengo la ganancia
@@ -171,15 +198,18 @@ EstimarGanancia_lightgbm <- function(x) {
   ganancia_normalizada <- ganancia * kfolds # normailizo la ganancia
 
   # asigno el mejor num_iterations
-  param_completo$num_iterations <- modelocv$best_iter
+  # param_completo$num_iterations <- modelocv$best_iter
+  best_iter <- modelocv$best_iter
+
   # elimino de la lista el componente
   param_completo["early_stopping_rounds"] <- NULL
-
+  param_completo_train <- param_completo
+  param_completo_train$num_iterations <- NULL
 
   # el lenguaje R permite asignarle ATRIBUTOS a cualquier variable
   # esta es la forma de devolver un parametro extra
   attr(ganancia_normalizada, "extras") <-
-    list("num_iterations" = modelocv$best_iter)
+    list("num_iterations" = best_iter)
 
   # logueo
   xx <- param_completo
@@ -193,6 +223,7 @@ EstimarGanancia_lightgbm <- function(x) {
     modelo <- lgb.train(
       data = dtrain,
       param = param_completo,
+      num_boost_round = best_iter,
       verbose = -100
     )
 
