@@ -33,7 +33,7 @@ options(error = function() {
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
 
-PARAM$experimento <- "HT4220D"
+PARAM$experimento <- "HT4220F"
 
 PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
 
@@ -41,7 +41,7 @@ PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
 # undersampling de 1.0  implica tomar TODOS los datos
 PARAM$trainingstrategy$undersampling <- 1.0
 
-PARAM$hyperparametertuning$iteraciones <- 150
+PARAM$hyperparametertuning$iteraciones <- 420
 PARAM$hyperparametertuning$xval_folds <- 5
 PARAM$hyperparametertuning$POS_ganancia <- 117000
 PARAM$hyperparametertuning$NEG_ganancia <- -3000
@@ -50,15 +50,20 @@ PARAM$hyperparametertuning$NEG_ganancia <- -3000
 
 # Aqui se cargan los bordes de los hiperparametros
 hs <- makeParamSet(
-  makeNumericParam("learning_rate", lower = 0.01, upper = 0.3),
-  makeIntegerParam("num_leaves", lower = 20L, upper = 3000L),
-  makeNumericParam("feature_fraction", lower = 0.5, upper = 1.0),
-  makeIntegerParam("min_data_in_leaf", lower = 10L, upper = 10000L),
-  makeNumericParam("bagging_fraction", lower = 0.5, upper = 1.0),
-  makeIntegerParam("bagging_freq", lower = 0L, upper = 50L),
-  makeNumericParam("lambda_l1", lower = 0, upper = 100),
-  makeNumericParam("lambda_l2", lower = 0, upper = 100),
-  makeIntegerParam("envios", lower = 5000L, upper = 15000L)
+  makeNumericParam("learning_rate", lower = 0.01, upper = 0.5),
+  makeIntegerParam("num_leaves", lower = 8L, upper = 13024L),
+  makeNumericParam("feature_fraction", lower = 0.1, upper = 1.0),
+  makeIntegerParam("min_data_in_leaf", lower = 1L, upper = 15000L),
+  makeIntegerParam("envios", lower = 3000L, upper = 33000L),
+  makeIntegerParam("max_depth", lower = 3L, upper = 120L),
+  makeNumericParam("lambda_l1", lower = 0, upper = 1000),
+  makeNumericParam("lambda_l2", lower = 0, upper = 1000),
+  makeNumericParam("bagging_fraction", lower = 0.0, upper = 1.0),
+  makeIntegerParam("bagging_freq", lower = 0L, upper = 1000L),
+  makeIntegerParam("min_child_samples", lower = 0L, upper = 1000L),
+  makeNumericParam("subsample", lower = 0.0, upper = 1.0),
+  makeNumericParam("colsample_bytree", lower = 0.0, upper = 1.0),
+  makeNumericParam("min_gain_to_split", lower = 0, upper = 150)
 )
 
 #------------------------------------------------------------------------------
