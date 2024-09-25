@@ -10,7 +10,7 @@ require("rlist")
 
 # defino los parametros de la corrida, en una lista, la variable global  PARAM
 PARAM <- list()
-PARAM$experimento <- "KA4210F"
+PARAM$experimento <- "KA4210H"
 
 
 PARAM$input$training <- c(202107) # meses donde se entrena el modelo
@@ -23,23 +23,22 @@ PARAM$finalmodel$num_iterations <- 1000
 # PARAM$finalmodel$min_data_in_leaf <- 76
 # PARAM$finalmodel$num_leaves <- 8
 
-# PARAM$finalmodel$max_bin <- 31
-
-PARAM$finalmodel$learning_rate <- 0.046566
-PARAM$finalmodel$num_leaves <- 660
-PARAM$finalmodel$feature_fraction <- 0.495494
-PARAM$finalmodel$min_data_in_leaf <- 595
-PARAM$finalmodel$envios <- 11153
-PARAM$finalmodel$max_depth <- 7
-PARAM$finalmodel$lambda_l1 <- 1.777594
-PARAM$finalmodel$lambda_l2 <- 7.761112
-PARAM$finalmodel$bagging_fraction <- 0.804570
-PARAM$finalmodel$bagging_freq <- 0
-PARAM$finalmodel$min_child_samples <- 32
 PARAM$finalmodel$max_bin <- 31
-PARAM$finalmodel$subsample <- 0.765754
-PARAM$finalmodel$colsample_bytree <- 0.968070
-PARAM$finalmodel$min_gain_to_split <- 0.003157
+
+PARAM$finalmodel$learning_rate <- 0.034039
+PARAM$finalmodel$num_leaves <- 604L
+PARAM$finalmodel$feature_fraction <- 0.509488
+PARAM$finalmodel$min_data_in_leaf <- 351L
+PARAM$finalmodel$envios <- 10781L
+PARAM$finalmodel$max_depth <- 7L
+PARAM$finalmodel$lambda_l1 <- 2.130450
+PARAM$finalmodel$lambda_l2 <- 3.725941
+PARAM$finalmodel$bagging_fraction <- 0.940852
+PARAM$finalmodel$bagging_freq <- 10L
+PARAM$finalmodel$min_child_samples <- 83L
+PARAM$finalmodel$subsample <- 0.925760
+PARAM$finalmodel$colsample_bytree <- 0.539038
+PARAM$finalmodel$min_gain_to_split <- 0.028021
 
 #------------------------------------------------------------------------------
 # graba a un archivo los componentes de lista
@@ -180,7 +179,7 @@ setorder(tb_entrega, -prob)
 # genero archivos con los  "envios" mejores
 # suba TODOS los archivos a Kaggle
 
-cortes <- seq(9000, 13500, by = 500)
+cortes <- seq(10000, 13000, by = 1000)
 for (envios in cortes) {
   tb_entrega[, Predicted := 0L]
   tb_entrega[1:envios, Predicted := 1L]
