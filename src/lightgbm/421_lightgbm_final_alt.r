@@ -25,20 +25,20 @@ PARAM$finalmodel$num_iterations <- 1000
 
 PARAM$finalmodel$max_bin <- 31
 
-PARAM$finalmodel$learning_rate <- 0.251760
-PARAM$finalmodel$num_leaves <- 795L
-PARAM$finalmodel$feature_fraction <- 0.721977
-PARAM$finalmodel$min_data_in_leaf <- 217L
-PARAM$finalmodel$envios <- 12771L
-PARAM$finalmodel$max_depth <- 7L
-PARAM$finalmodel$lambda_l1 <- 0.931980
-PARAM$finalmodel$lambda_l2 <- 921.763947
-PARAM$finalmodel$bagging_fraction <- 0.779417
-PARAM$finalmodel$bagging_freq <- 49L
-PARAM$finalmodel$min_child_samples <- 14L
-PARAM$finalmodel$subsample <- 0.725302
-PARAM$finalmodel$colsample_bytree <- 0.516605
-PARAM$finalmodel$min_gain_to_split <- 0.044443
+PARAM$finalmodel$learning_rate <- 0.222172
+PARAM$finalmodel$num_leaves <- 11005L
+PARAM$finalmodel$feature_fraction <- 0.496995
+PARAM$finalmodel$min_data_in_leaf <- 1056L
+PARAM$finalmodel$envios <- 11236L
+PARAM$finalmodel$max_depth <- 25L
+PARAM$finalmodel$lambda_l1 <- 2.077652
+PARAM$finalmodel$lambda_l2 <- 940.371635
+PARAM$finalmodel$bagging_fraction <- 0.886560
+PARAM$finalmodel$bagging_freq <- 347L
+PARAM$finalmodel$min_child_samples <- 325L
+PARAM$finalmodel$subsample <- 0.873705
+PARAM$finalmodel$colsample_bytree <- 0.266124
+PARAM$finalmodel$min_gain_to_split <- 0.063780
 
 #------------------------------------------------------------------------------
 # graba a un archivo los componentes de lista
