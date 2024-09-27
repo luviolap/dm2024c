@@ -1,0 +1,2836 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+luviola@fantasmita128:~$ cd dm2024c/
+luviola@fantasmita128:~/dm2024c$ ls
+Vivencial_DiccionarioDatos_2024.ods  readme.md  src
+luviola@fantasmita128:~/dm2024c$ cd src/workflows/
+luviola@fantasmita128:~/dm2024c/src/workflows$ ls
+502_run_workflow_vivencial.r     z517_workflow_base_f202107_conc.r
+529_workflow_base_f202109_viv.r  z519_workflow_base_f202109_conc.r
+z501_run_workflow_conceptual.r   z527_workflow_base_f202107_viv.r
+z502_run_workflow_vivencial.r    z529_workflow_base_f202109_viv.r
+luviola@fantasmita128:~/dm2024c/src/workflows$ Rscript 502_run_workflow_vivencial.r
+Loading required package: rlang
+Fatal error: cannot open file '/home/luviola/labo2024ba/src/workflows/529_workflow_base_f
+202109_viv.r': No such file or directory
+luviola@fantasmita128:~/dm2024c/src/workflows$ Rscript 502_run_workflow_vivencial.r
+Loading required package: rlang
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: rlang
+Loading required package: yaml
+Loading required package: data.table
+
+Attaching package: ‘data.table’
+
+The following object is masked from ‘package:rlang’:
+
+    :=
+
+Loading required package: rlist
+Loading required package: mlflow
+Loading required package: digest
+Loading required package: tools
+por abrir ambiente
+ambiente abierto
+dentro de exp_wf_init(), output$nombrewf =  wf_septiembre-001
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+imprimo  env_up1
+character(0)
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =
+NO existe pinputexps en  env_up1
+env_up2$param_local$instruction =  1
+exp_correr_script()  START
+candidatos =
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  001-DT_incorporar_dataset_competencia2024 ~/buckets/b1/expw/DT
+-0001
+20240926.220254 1       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/DT-0001        DT_incorporar_dataset_competencia2024
+Experiment `/flow` does not exist. Creating a new experiment.
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  DT-0001
+expw/DT-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1101_DT_incorporar_dataset.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ~/datasets/vivencial_competencia_2024.csv.gz
+Iniciando lectura del archivo
+Finalizada lectura del archivo
+verificacion de nombres de campo
+verificacion de primary key
+ordeno el dataset
+grabo el dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+grabo metadata
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1101_DT_incorporar_dataset.r  END
+./run.sh: line 9: 22136 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (22136) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92650}
+exp_correr_script() env_up$param_local$lastexp =  DT-0001
+imprimo  env_up1
+[1] "pinputexps" "metodo"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  DT-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps" "metodo"
+env_up2$param_local$instruction =  2
+exp_correr_script()  START
+candidatos =  0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  002-CA_catastrophe_base ~/buckets/b1/expw/CA-0001
+20240926.220452 2       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/CA-0001        CA_catastrophe_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  CA-0001
+expw/CA-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294430 15.8     692348   37   478244 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Installing package into ‘/home/luviola/.local/lib/R/site-library’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘ucminf’, ‘ordinal’, ‘pan’, ‘jomo’, ‘mitml’
+
+trying URL 'http://cran.us.r-project.org/src/contrib/ucminf_1.2.2.tar.gz'
+Content type 'application/x-gzip' length 16883 bytes (16 KB)
+==================================================
+downloaded 16 KB
+
+trying URL 'http://cran.us.r-project.org/src/contrib/ordinal_2023.12-4.1.tar.gz'
+Content type 'application/x-gzip' length 803837 bytes (784 KB)
+==================================================
+downloaded 784 KB
+
+trying URL 'http://cran.us.r-project.org/src/contrib/pan_1.9.tar.gz'
+Content type 'application/x-gzip' length 1087690 bytes (1.0 MB)
+==================================================
+downloaded 1.0 MB
+
+trying URL 'http://cran.us.r-project.org/src/contrib/jomo_2.7-6.tar.gz'
+Content type 'application/x-gzip' length 985641 bytes (962 KB)
+==================================================
+downloaded 962 KB
+
+trying URL 'http://cran.us.r-project.org/src/contrib/mitml_0.4-5.tar.gz'
+Content type 'application/x-gzip' length 223835 bytes (218 KB)
+==================================================
+downloaded 218 KB
+
+trying URL 'http://cran.us.r-project.org/src/contrib/mice_3.16.0.tar.gz'
+Content type 'application/x-gzip' length 600498 bytes (586 KB)
+==================================================
+downloaded 586 KB
+
+* installing *source* package ‘ucminf’ ...
+** package ‘ucminf’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+gfortran  -fpic  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefi
+x-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protecti
+on -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4
+.4.1-1.2404.0  -c fortran.f -o fortran.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c interface.c -o interface.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z
+,relro -o ucminf.so fortran.o init.o interface.o -llapack -lblas -lgfortran -lm -lquadmat
+h -lgfortran -lm -lquadmath -L/usr/lib/R/lib -lR
+installing to /home/luviola/.local/lib/R/site-library/00LOCK-ucminf/00new/ucminf/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ucminf)
+* installing *source* package ‘pan’ ...
+** package ‘pan’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+using Fortran compiler: ‘GNU Fortran (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c package_native_routine_registration_skeleton.c -o package_nat
+ive_routine_registration_skeleton.o
+gfortran  -fpic  -g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefi
+x-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protecti
+on -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4
+.4.1-1.2404.0  -c pan.f -o pan.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z
+,relro -o pan.so package_native_routine_registration_skeleton.o pan.o -lgfortran -lm -lqu
+admath -L/usr/lib/R/lib -lR
+installing to /home/luviola/.local/lib/R/site-library/00LOCK-pan/00new/pan/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (pan)
+* installing *source* package ‘ordinal’ ...
+** package ‘ordinal’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c get_fitted.c -o get_fitted.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c init.c -o init.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c links.c -o links.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c utilityFuns.c -o utilityFuns.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z
+,relro -o ordinal.so get_fitted.o init.o links.o utilityFuns.o -L/usr/lib/R/lib -lR
+installing to /home/luviola/.local/lib/R/site-library/00LOCK-ordinal/00new/ordinal/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (ordinal)
+* installing *source* package ‘jomo’ ...
+** package ‘jomo’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘gcc (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1C.c -o jomo1C.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1ranC.c -o jomo1ranC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1ranhrC.c -o jomo1ranhrC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1ranhrsmcC.c -o jomo1ranhrsmcC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1ransmcC.c -o jomo1ransmcC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo1smcC.c -o jomo1smcC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo2comC.c -o jomo2comC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo2hrC.c -o jomo2hrC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo2hrsmcC.c -o jomo2hrsmcC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo2smcC.c -o jomo2smcC.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c jomo_init.c -o jomo_init.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c pdflib.c -o pdflib.o
+gcc -I"/usr/share/R/include" -DNDEBUG       -fpic  -g -O2 -fno-omit-frame-pointer -mno-om
+it-leaf-frame-pointer -ffile-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=. -fstack-prote
+ctor-strong -fstack-clash-protection -Wformat -Werror=format-security -fcf-protection -fd
+ebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/usr/src/r-base-4.4.1-1.2404.0 -Wdate-t
+ime -D_FORTIFY_SOURCE=3  -c wishart.c -o wishart.o
+gcc -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-objects -Wl,-z
+,relro -o jomo.so jomo1C.o jomo1ranC.o jomo1ranhrC.o jomo1ranhrsmcC.o jomo1ransmcC.o jomo
+1smcC.o jomo2comC.o jomo2hrC.o jomo2hrsmcC.o jomo2smcC.o jomo_init.o pdflib.o wishart.o -
+L/usr/lib/R/lib -lR
+installing to /home/luviola/.local/lib/R/site-library/00LOCK-jomo/00new/jomo/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (jomo)
+* installing *source* package ‘mitml’ ...
+** package ‘mitml’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (mitml)
+* installing *source* package ‘mice’ ...
+** package ‘mice’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘g++ (Ubuntu 13.2.0-23ubuntu4) 13.2.0’
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/luviola/.local/lib/R/site-li
+brary/cpp11/include' -I'/home/luviola/.local/lib/R/site-library/Rcpp/include'     -fpic
+-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-ba
+se-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werr
+or=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/
+usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c RcppExports.cpp -o Rcp
+pExports.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/luviola/.local/lib/R/site-li
+brary/cpp11/include' -I'/home/luviola/.local/lib/R/site-library/Rcpp/include'     -fpic
+-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-ba
+se-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werr
+or=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/
+usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c legendre.cpp -o legend
+re.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/luviola/.local/lib/R/site-li
+brary/cpp11/include' -I'/home/luviola/.local/lib/R/site-library/Rcpp/include'     -fpic
+-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-ba
+se-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werr
+or=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/
+usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c match.cpp -o match.o
+g++ -std=gnu++17 -I"/usr/share/R/include" -DNDEBUG  -I'/home/luviola/.local/lib/R/site-li
+brary/cpp11/include' -I'/home/luviola/.local/lib/R/site-library/Rcpp/include'     -fpic
+-g -O2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -ffile-prefix-map=/build/r-ba
+se-EawLoD/r-base-4.4.1=. -fstack-protector-strong -fstack-clash-protection -Wformat -Werr
+or=format-security -fcf-protection -fdebug-prefix-map=/build/r-base-EawLoD/r-base-4.4.1=/
+usr/src/r-base-4.4.1-1.2404.0 -Wdate-time -D_FORTIFY_SOURCE=3   -c matchindex.cpp -o matc
+hindex.o
+g++ -std=gnu++17 -shared -L/usr/lib/R/lib -Wl,-Bsymbolic-functions -flto=auto -ffat-lto-o
+bjects -Wl,-z,relro -o mice.so RcppExports.o legendre.o match.o matchindex.o -L/usr/lib/R
+/lib -lR
+installing to /home/luviola/.local/lib/R/site-library/00LOCK-mice/00new/mice/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (mice)
+
+The downloaded source packages are in
+        ‘/tmp/Rtmpt4CTOH/downloaded_packages’
+
+Attaching package: ‘mice’
+
+The following object is masked from ‘package:stats’:
+
+    filter
+
+The following objects are masked from ‘package:base’:
+
+    cbind, rbind
+
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1201_CA_reparar_dataset.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./DT-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+inicio Corregir_Rotas()
+fin Corregir_rotas()
+grabado del dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+grabado metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1201_CA_reparar_dataset.r  END
+./run.sh: line 9: 22253 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (22253) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92651}
+exp_correr_script() env_up$param_local$lastexp =  CA-0001
+imprimo  env_up1
+[1] "pinputexps"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  CA-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps"
+env_up2$param_local$instruction =  3
+exp_correr_script()  START
+candidatos =  0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  003-FEintra_manual_base ~/buckets/b1/expw/FEintra-0001
+20240926.220901 3       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/FEintra-0001   FEintra_manual_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  FEintra-0001
+expw/FEintra-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1301_FE_intrames_manual.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./CA-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+variables intra mest
+inicio AgregarVariables_IntraMes()
+ATENCION, hay 71 valores infinitos en tu dataset. Seran pasados a NA
+ATENCION, hay 3313766 valores NaN 0/0 en tu dataset. Seran pasados arbitrariamente a 0
+Si no te gusta la decision, modifica a gusto el programa!
+
+fin AgregarVariables_IntraMes()
+grabado del dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+grabado de metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1301_FE_intrames_manual.r  END
+./run.sh: line 9: 22960 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (22960) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92658}
+exp_correr_script() env_up$param_local$lastexp =  FEintra-0001
+imprimo  env_up1
+[1] "pinputexps" "metodo"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  FEintra-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps" "metodo"
+env_up2$param_local$instruction =  4
+exp_correr_script()  START
+candidatos =  0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  004-DR_drifting_base ~/buckets/b1/expw/DR-0001
+20240926.221200 4       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/DR-0001        DR_drifting_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  DR-0001
+expw/DR-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1401_DR_corregir_drifting.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./FEintra-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+inicio drift_rank_cero_fijo()
+mrentabilidad  mrentabilidad_annual  mcomisiones  mactivos_margen  mpasivos_margen  mcuen
+ta_corriente_adicional  mcuenta_corriente  mcaja_ahorro  mcaja_ahorro_adicional  mcaja_ah
+orro_dolares  mcuentas_saldo  mautoservicio  mtarjeta_visa_consumo  mtarjeta_master_consu
+mo  mprestamos_personales  mprestamos_prendarios  mprestamos_hipotecarios  mplazo_fijo_do
+lares  mplazo_fijo_pesos  minversion1_pesos  minversion1_dolares  minversion2  mpayroll
+mpayroll2  mcuenta_debitos_automaticos  mttarjeta_visa_debitos_automaticos  mttarjeta_mas
+ter_debitos_automaticos  mpagodeservicios  mpagomiscuentas  mcajeros_propios_descuentos
+mtarjeta_visa_descuentos  mtarjeta_master_descuentos  mcomisiones_mantenimiento  mcomisio
+nes_otras  mforex_buy  mforex_sell  mtransferencias_recibidas  mtransferencias_emitidas
+mextraccion_autoservicio  mcheques_depositados  mcheques_emitidos  mcheques_depositados_r
+echazados  mcheques_emitidos_rechazados  matm  matm_other  Master_mfinanciacion_limite  M
+aster_msaldototal  Master_msaldopesos  Master_msaldodolares  Master_mconsumospesos  Maste
+r_mconsumosdolares  Master_mlimitecompra  Master_madelantopesos  Master_madelantodolares
+ Master_mpagado  Master_mpagospesos  Master_mpagosdolares  Master_mconsumototal  Master_m
+pagominimo  Visa_mfinanciacion_limite  Visa_msaldototal  Visa_msaldopesos  Visa_msaldodol
+ares  Visa_mconsumospesos  Visa_mconsumosdolares  Visa_mlimitecompra  Visa_madelantopesos
+  Visa_madelantodolares  Visa_mpagado  Visa_mpagospesos  Visa_mpagosdolares  Visa_mconsum
+ototal  Visa_mpagominimo  mpayroll_sobre_edad  mv_status07  vm_mfinanciacion_limite  vm_m
+saldototal  vm_msaldopesos  vm_msaldodolares  vm_mconsumospesos  vm_mconsumosdolares  vm_
+mlimitecompra  vm_madelantopesos  vm_madelantodolares  vm_mpagado  vm_mpagospesos  vm_mpa
+gosdolares  vm_mconsumototal  vm_mpagominimo
+fin drift_rank_cero_fijo()
+escritura del dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+escritura de metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1401_DR_corregir_drifting.r  END
+./run.sh: line 9: 23073 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (23073) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92659}
+exp_correr_script() env_up$param_local$lastexp =  DR-0001
+imprimo  env_up1
+[1] "pinputexps"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  DR-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps"
+env_up2$param_local$instruction =  5
+exp_correr_script()  START
+candidatos =  0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  005-FEhist_base ~/buckets/b1/expw/FEhist-0001
+20240926.221823 5       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/FEhist-0001    FEhist_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  FEhist-0001
+expw/FEhist-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: Rcpp
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1501_FE_historia.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./DR-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+[1] "clase_ternaria"
+Inicio lag1
+Fin lag1
+ordenado dataset
+grabado dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+grabado metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1501_FE_historia.r  END
+./run.sh: line 9: 23465 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (23465) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92666}
+exp_correr_script() env_up$param_local$lastexp =  FEhist-0001
+imprimo  env_up1
+[1] "pinputexps" "ratio"      "desvio"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  FEhist-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps" "ratio"      "desvio"
+env_up2$param_local$instruction =  6
+exp_correr_script()  START
+candidatos =  0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  006-FErf_attributes_base ~/buckets/b1/expw/FErf-0001
+20240926.223106 6       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/FErf-0001      FErf_attributes_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  FErf-0001
+expw/FErf-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: primes
+Loading required package: lightgbm
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z1311_FE_rfatributes.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura dataset
+Verificando archivo : ./FEhist-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+ordenado dataset
+inicio AgregaVarRandomForest()
+Fin construccion RandomForest
+periodo =  201901
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201902
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201903
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201904
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201905
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201906
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201907
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201908
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201909
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201910
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201911
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  201912
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202001
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202002
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202003
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202004
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202005
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202006
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202007
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202008
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202009
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202010
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202011
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202012
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202101
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202102
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202103
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202104
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202105
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202106
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202107
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202108
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+periodo =  202109
+Inicio prediccion
+Fin prediccion
+1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20
+             used    (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells    1738618    92.9    2879662   153.8    2879662   153.8
+Vcells 4377052252 33394.3 7421964108 56625.1 7419976362 56610.0
+grabado dataset
+Iniciando grabado del dataset
+Finalizado grabado del dataset
+grabado metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset.csv.gz
+Verificando archivo : dataset_metadata.yml
+z1311_FE_rfatributes.r  END
+./run.sh: line 9: 23870 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (23870) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92673}
+exp_correr_script() env_up$param_local$lastexp =  FErf-0001
+imprimo  env_up1
+[1] "pinputexps"
+imprimo  env_up2
+[1] "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  FErf-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps"
+env_up2$param_local$instruction =  7
+exp_correr_script()  START
+candidatos =  0 0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  007-TS_strategy_base9 ~/buckets/b1/expw/TS-0001
+20240926.224913 7       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/TS-0001        TS_strategy_base9
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  TS-0001
+expw/TS-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: primes
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z2101_TS_training_strategy.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./FErf-0001/dataset.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+ordeno_dataset
+inicio grabar future
+Iniciando grabado de dataset_future.csv.gz
+Finalizado grabado de dataset_future.csv.gz
+Iniciando grabado de dataset_train_final.csv.gz
+Finalizado grabado de dataset_train_final.csv.gz
+inicio grabar train
+Iniciando grabado de dataset_training.csv.gz
+Finalizado grabado de dataset_training.csv.gz
+grabar metadata
+Fin del programa
+fin del programa
+Verificando archivo : dataset_future.csv.gz
+Verificando archivo : dataset_train_final.csv.gz
+Verificando archivo : dataset_training.csv.gz
+z2101_TS_training_strategy.r  END
+./run.sh: line 9: 24429 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (24429) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92677}
+exp_correr_script() env_up$param_local$lastexp =  TS-0001
+imprimo  env_up1
+[1] "pinputexps" "bypass"
+imprimo  env_up2
+[1] "ts9"         "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  TS-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps" "bypass"
+env_up2$param_local$instruction =  8
+exp_correr_script()  START
+candidatos =  0 0 0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  008-HT_tuning_base ~/buckets/b1/expw/HT-0001
+20240926.225820 8       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/HT-0001        HT_tuning_base
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  HT-0001
+expw/HT-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: rlist
+Loading required package: yaml
+Loading required package: lightgbm
+Loading required package: DiceKriging
+Loading required package: mlrMBO
+Loading required package: mlr
+Loading required package: ParamHelpers
+Loading required package: smoof
+Loading required package: checkmate
+
+Attaching package: ‘checkmate’
+
+The following object is masked from ‘package:DiceKriging’:
+
+    checkNames
+
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: mlflow
+Loading required package: digest
+Loading required package: ulimit
+z2201_HT_lightgbm_gan.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura del dataset
+Verificando archivo : ./TS-0001/dataset_training.csv.gz
+Iniciando lectura del dataset
+Finalizada lectura del dataset
+Warning message:
+In `[.data.table`(dataset, , `:=`(azar, NULL)) :
+  Tried to assign NULL to column 'azar', but this column does not exist to remove
+creacion clase01
+creacion campos_buenos
+creacion dtrain
+creacion dvalidate
+creacion testing
+            used   (Mb) gc trigger    (Mb)   max used    (Mb)
+Ncells   2096160  112.0    3989917   213.1    2748125   146.8
+Vcells 657619879 5017.3 1588125778 12116.5 1588120708 12116.4
+Computing y column(s) for design. Not provided.
+Inicio EstimarGanancia_lightgbm()
+Validate  1     810    49741943     50866958
+20240926.230202 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      390     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.171368246365361       0.6164629
+03423068        206     3383    10647   1       58857440.7796102        58857440.77961021
+20240926.230203 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      390     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.171368246365361       0.6164629
+03423068        206     3383    10647   1       58857440.7796102        58857440.77961021
+Experiment `/test-2e9435` does not exist. Creating a new experiment.
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  2     500    48704856     51217477
+20240926.230319 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      82      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.213105318869559       0.8088956
+38806348        1920    7223    12058   1       59139223.3883059        59139223.38830592
+20240926.230320 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      82      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.213105318869559       0.8088956
+38806348        1920    7223    12058   1       59139223.3883059        59139223.38830592
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  3     430    50579517     54428150
+20240926.230432 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      20      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.249448158998326       0.6891451
+80767448        841     5563    11966   1       56344038.9805097        56344038.98050973
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  4     570    50767040     50873373
+20240926.230605 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      36      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0282438727502538      0.6328624
+26581649        1752    4687    14603   1       54277356.8215892        54277356.82158924
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  5     430    51229495     52376147
+20240926.230708 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      11      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.141878049927911       0.6678199
+37232776        1447    9119    10245   1       55208328.3358321        55208328.33583215
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  6     640    49840718     50772888
+20240926.230912 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      210     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.120243707057832       0.8607602
+06999984        2040    2968    13968   1       60678488.7556222        60678488.75562226
+20240926.230913 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      210     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.120243707057832       0.8607602
+06999984        2040    2968    13968   1       60678488.7556222        60678488.75562226
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  7     1500    51079771     51760045
+20240926.231314 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1059    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0820917072420882      0.7406318
+44970962        639     4341    15115   1       58207683.6581709        58207683.65817097
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  8     460    50390835     51740987
+20240926.231452 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      19      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.09583001594761        0.5731361
+24326222        1065    6564    15063   1       53392409.2953523        53392409.29535238
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  9     430    50535132     52331685
+20240926.231557 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      18      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.23215106569869        0.8498386
+95824484        270     7699    12545   1       58332916.041979 58332916.041979 9
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  10     560    53140349     53737763
+20240926.231934 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      102     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0595058421667701      0.7871583
+05146482        1156    427     13908   1       61434800.5997002        61434800.59970021
+0
+20240926.231935 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      102     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0595058421667701      0.7871583
+05146482        1156    427     13908   1       61434800.5997002        61434800.59970021
+0
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  11     520    49467642     51567723
+20240926.232054 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      30      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0417286820592279      0.7619490
+7188425 1011    9952    10482   1       55103985.0074963        55103985.0074963        1
+1
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  12     430    48747649     50535664
+20240926.232247 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      11      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.203866673116984       0.5352265
+792962  417     8708    15987   1       51872463.2683658        51872463.2683658        1
+2
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  13     1020    49438012     49573046
+20240926.232614 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      607     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.291131370909937       0.8953724
+21768835        749     2019    12041   1       53342187.4062968        53342187.40629681
+3
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  14     440    49718763     52176159
+20240926.232845 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      34      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.275723038301312       0.5225839
+76649322        1346    928     10685   1       57720772.113943 57720772.113943 14
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  15     640    51194855     52667400
+20240926.233035 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      219     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.154512875678176       0.5927599
+24974308        69      1478    11743   1       59990970.0149925        59990970.01499251
+5
+Fin EstimarGanancia_lightgbm()
+Inicio EstimarGanancia_lightgbm()
+Validate  16     430    50199327     51746690
+20240926.233143 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      12      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.190981305725084       0.7012762
+49232576        1662    6215    12800   1       55748665.6671664        55748665.66716641
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 0: learning_rate=0.171; feature_fraction=0.616; num_leaves=206; min_data_in_leaf=33
+83 : y = 5.89e+07 : 168.9 secs : initdesign
+[mbo] 0: learning_rate=0.213; feature_fraction=0.809; num_leaves=1920; min_data_in_leaf=7
+223 : y = 5.91e+07 : 76.1 secs : initdesign
+[mbo] 0: learning_rate=0.249; feature_fraction=0.689; num_leaves=841; min_data_in_leaf=55
+63 : y = 5.63e+07 : 72.4 secs : initdesign
+[mbo] 0: learning_rate=0.0282; feature_fraction=0.633; num_leaves=1752; min_data_in_leaf=
+4687 : y = 5.43e+07 : 92.7 secs : initdesign
+[mbo] 0: learning_rate=0.142; feature_fraction=0.668; num_leaves=1447; min_data_in_leaf=9
+119 : y = 5.52e+07 : 63.1 secs : initdesign
+[mbo] 0: learning_rate=0.12; feature_fraction=0.861; num_leaves=2040; min_data_in_leaf=29
+68 : y = 6.07e+07 : 124.9 secs : initdesign
+[mbo] 0: learning_rate=0.0821; feature_fraction=0.741; num_leaves=639; min_data_in_leaf=4
+341 : y = 5.82e+07 : 240.6 secs : initdesign
+[mbo] 0: learning_rate=0.0958; feature_fraction=0.573; num_leaves=1065; min_data_in_leaf=
+6564 : y = 5.34e+07 : 98.7 secs : initdesign
+[mbo] 0: learning_rate=0.232; feature_fraction=0.85; num_leaves=270; min_data_in_leaf=769
+9 : y = 5.83e+07 : 64.6 secs : initdesign
+[mbo] 0: learning_rate=0.0595; feature_fraction=0.787; num_leaves=1156; min_data_in_leaf=
+427 : y = 6.14e+07 : 218.7 secs : initdesign
+[mbo] 0: learning_rate=0.0417; feature_fraction=0.762; num_leaves=1011; min_data_in_leaf=
+9952 : y = 5.51e+07 : 79.0 secs : initdesign
+[mbo] 0: learning_rate=0.204; feature_fraction=0.535; num_leaves=417; min_data_in_leaf=87
+08 : y = 5.19e+07 : 112.9 secs : initdesign
+[mbo] 0: learning_rate=0.291; feature_fraction=0.895; num_leaves=749; min_data_in_leaf=20
+19 : y = 5.33e+07 : 206.6 secs : initdesign
+[mbo] 0: learning_rate=0.276; feature_fraction=0.523; num_leaves=1346; min_data_in_leaf=9
+28 : y = 5.77e+07 : 150.5 secs : initdesign
+[mbo] 0: learning_rate=0.155; feature_fraction=0.593; num_leaves=69; min_data_in_leaf=147
+8 : y = 6e+07 : 110.6 secs : initdesign
+[mbo] 0: learning_rate=0.191; feature_fraction=0.701; num_leaves=1662; min_data_in_leaf=6
+215 : y = 5.57e+07 : 68.0 secs : initdesign
+Saved the current state after iteration 1 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  17     630    52562297     54441019
+20240926.233454 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      180     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0675494307761774      0.8064703
+34469295        1684    662     11259   1       60426058.4707646        60426058.47076461
+7
+Fin EstimarGanancia_lightgbm()
+[mbo] 1: learning_rate=0.0675; feature_fraction=0.806; num_leaves=1684; min_data_in_leaf=
+662 : y = 6.04e+07 : 189.2 secs : infill_ei
+Saved the current state after iteration 2 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  18     670    51851117     52310846
+20240926.233710 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      238     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.112812867667014       0.7703074
+39660607        221     109     15270   1       56840194.9025487        56840194.90254871
+8
+Fin EstimarGanancia_lightgbm()
+[mbo] 2: learning_rate=0.113; feature_fraction=0.77; num_leaves=221; min_data_in_leaf=109
+ : y = 5.68e+07 : 133.5 secs : infill_ei
+Saved the current state after iteration 3 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  19     2730    52742226     53569838
+20240926.234635 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2149    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0212138454043154      0.7950800
+19820772        1246    1692    11902   1       60504974.5127436        60504974.51274361
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 3: learning_rate=0.0212; feature_fraction=0.795; num_leaves=1246; min_data_in_leaf=
+1692 : y = 6.05e+07 : 562.4 secs : infill_ei
+Saved the current state after iteration 4 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  20     670    53304306     53937225
+20240926.235215 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      206     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0559117279258552      0.7565005
+76014851        1265    103     13336   1       58718176.9115442        58718176.91154422
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 4: learning_rate=0.0559; feature_fraction=0.757; num_leaves=1265; min_data_in_leaf=
+103 : y = 5.87e+07 : 338.4 secs : infill_ei
+Saved the current state after iteration 5 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  21     1010    53949679     55559523
+20240926.235855 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      555     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0717765923450592      0.8121098
+46243195        1163    328     13598   1       59633826.0869565        59633826.08695652
+1
+Fin EstimarGanancia_lightgbm()
+[mbo] 5: learning_rate=0.0718; feature_fraction=0.812; num_leaves=1163; min_data_in_leaf=
+328 : y = 5.96e+07 : 397.8 secs : infill_ei
+Saved the current state after iteration 6 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  22     1240    51669333     52751589
+20240927.000239 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      803     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0953413179151558      0.8150260
+57418752        2014    3099    12874   1       58753532.2338831        58753532.23388312
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 6: learning_rate=0.0953; feature_fraction=0.815; num_leaves=2014; min_data_in_leaf=
+3099 : y = 5.88e+07 : 221.0 secs : infill_ei
+Saved the current state after iteration 7 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  23     590    51888819     53810504
+20240927.000551 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      173     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.185950740746317       0.7881067
+8304185 1419    492     13671   1       59776925.0374813        59776925.0374813        2
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 7: learning_rate=0.186; feature_fraction=0.788; num_leaves=1419; min_data_in_leaf=4
+92 : y = 5.98e+07 : 190.5 secs : infill_ei
+Saved the current state after iteration 8 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  24     480    48884750     50064015
+20240927.000711 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      12      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0517575556826422      0.8621718
+96189317        1923    5495    11915   1       54977038.9805097        54977038.98050972
+4
+Fin EstimarGanancia_lightgbm()
+[mbo] 8: learning_rate=0.0518; feature_fraction=0.862; num_leaves=1923; min_data_in_leaf=
+5495 : y = 5.5e+07 : 77.2 secs : infill_ei
+Saved the current state after iteration 9 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  25     690    51856471     52590340
+20240927.000945 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      267     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.138282730112183       0.7971325
+26910763        2046    1494    11157   1       59317545.7271364        59317545.72713642
+5
+Fin EstimarGanancia_lightgbm()
+[mbo] 9: learning_rate=0.138; feature_fraction=0.797; num_leaves=2046; min_data_in_leaf=1
+494 : y = 5.93e+07 : 152.5 secs : infill_ei
+Saved the current state after iteration 10 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  26     1510    54346390     55104553
+20240927.001757 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      913     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200261183812962      0.8415125
+93270966        1668    518     13888   1       60042866.5667166        60042866.56671662
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 10: learning_rate=0.02; feature_fraction=0.842; num_leaves=1668; min_data_in_leaf=5
+18 : y = 6e+07 : 489.1 secs : infill_ei
+Saved the current state after iteration 11 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  27     700    52485517     52815801
+20240927.002035 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      239     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0623360338197991      0.8319645
+36523058        1352    1328    11032   1       61046368.8155922        61046368.81559222
+7
+Fin EstimarGanancia_lightgbm()
+[mbo] 11: learning_rate=0.0623; feature_fraction=0.832; num_leaves=1352; min_data_in_leaf
+=1328 : y = 6.1e+07 : 156.5 secs : infill_ei
+Saved the current state after iteration 12 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  28     970    52065651     53820015
+20240927.002420 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      512     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0612252283628226      0.8490492
+99871125        1227    1410    12260   1       59515952.023988 59515952.023988 28
+Fin EstimarGanancia_lightgbm()
+[mbo] 12: learning_rate=0.0612; feature_fraction=0.849; num_leaves=1227; min_data_in_leaf
+=1410 : y = 5.95e+07 : 223.2 secs : infill_ei
+Saved the current state after iteration 13 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  29     1310    52786726     53828424
+20240927.002926 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      846     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.05801051988293        0.8085960
+13353223        1457    1265    13202   1       59557478.2608696        59557478.26086962
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 13: learning_rate=0.058; feature_fraction=0.809; num_leaves=1457; min_data_in_leaf=
+1265 : y = 5.96e+07 : 303.2 secs : infill_ei
+Saved the current state after iteration 14 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  30     960    50791181     51564372
+20240927.003234 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      538     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.146881477150469       0.8126562
+18526111        1309    2466    13750   1       57132788.6056972        57132788.60569723
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 14: learning_rate=0.147; feature_fraction=0.813; num_leaves=1309; min_data_in_leaf=
+2466 : y = 5.71e+07 : 186.0 secs : infill_ei
+Saved the current state after iteration 15 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  31     1140    53261909     54639087
+20240927.003946 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      672     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0558751917996463      0.8327400
+31683335        2048    431     12957   1       59663212.8935532        59663212.89355323
+1
+Fin EstimarGanancia_lightgbm()
+[mbo] 15: learning_rate=0.0559; feature_fraction=0.833; num_leaves=2048; min_data_in_leaf
+=431 : y = 5.97e+07 : 429.9 secs : infill_ei
+Saved the current state after iteration 16 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  32     1230    53636252     54325427
+20240927.004533 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      640     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0202329202246945      0.8031771
+6169877 2045    705     11682   1       61075079.4602699        61075079.4602699        3
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 16: learning_rate=0.0202; feature_fraction=0.803; num_leaves=2045; min_data_in_leaf
+=705 : y = 6.11e+07 : 345.1 secs : infill_ei
+Saved the current state after iteration 17 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  33     1210    53266981     54022472
+20240927.005111 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      616     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0204079922345724      0.8006472
+60474224        2046    716     12113   1       61250385.3073463        61250385.30734633
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 17: learning_rate=0.0204; feature_fraction=0.801; num_leaves=2046; min_data_in_leaf
+=716 : y = 6.13e+07 : 334.9 secs : infill_ei
+Saved the current state after iteration 18 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  34     890    52604619     53923267
+20240927.005830 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      428     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0640421953782685      0.7900882
+34690915        1917    116     15039   1       59512925.0374813        59512925.03748133
+4
+Fin EstimarGanancia_lightgbm()
+[mbo] 18: learning_rate=0.064; feature_fraction=0.79; num_leaves=1917; min_data_in_leaf=1
+16 : y = 5.95e+07 : 436.8 secs : infill_ei
+Saved the current state after iteration 19 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  35     1480    54329225     55056075
+20240927.010704 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      883     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200993416442312      0.7980351
+28286279        1119    457     13155   1       60078868.065967 60078868.065967 35
+Fin EstimarGanancia_lightgbm()
+[mbo] 19: learning_rate=0.0201; feature_fraction=0.798; num_leaves=1119; min_data_in_leaf
+=457 : y = 6.01e+07 : 512.3 secs : infill_ei
+Saved the current state after iteration 20 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  36     2810    54023064     54152457
+20240927.011951 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2217    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.020045947637263       0.8016585
+71160033        2046    906     13271   1       59921332.8335832        59921332.83358323
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 20: learning_rate=0.02; feature_fraction=0.802; num_leaves=2046; min_data_in_leaf=9
+06 : y = 5.99e+07 : 764.4 secs : infill_ei
+Saved the current state after iteration 21 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  37     2140    53753543     54183715
+20240927.012957 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1550    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200140237314843      0.8123179
+34231821        2045    807     14540   1       60249085.4572714        60249085.45727143
+7
+Fin EstimarGanancia_lightgbm()
+[mbo] 21: learning_rate=0.02; feature_fraction=0.812; num_leaves=2045; min_data_in_leaf=8
+07 : y = 6.02e+07 : 604.0 secs : infill_ei
+Saved the current state after iteration 22 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  38     560    50942652     52202663
+20240927.013300 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      146     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.190749478298381       0.6182148
+43631853        897     106     12689   1       59245383.808096 59245383.808096 38
+Fin EstimarGanancia_lightgbm()
+[mbo] 22: learning_rate=0.191; feature_fraction=0.618; num_leaves=897; min_data_in_leaf=1
+06 : y = 5.92e+07 : 180.1 secs : infill_ei
+Saved the current state after iteration 23 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  39     2520    53783813     54154393
+20240927.014423 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1931    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0201154320063071      0.8015415
+13970671        1644    887     15177   1       59812508.2458771        59812508.24587713
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 23: learning_rate=0.0201; feature_fraction=0.802; num_leaves=1644; min_data_in_leaf
+=887 : y = 5.98e+07 : 681.3 secs : infill_ei
+Saved the current state after iteration 24 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  40     1460    53101298     54096189
+20240927.015147 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      865     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200682494815609      0.8999549
+58010485        2048    669     11287   1       61290484.2578711        61290484.25787114
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 24: learning_rate=0.0201; feature_fraction=0.9; num_leaves=2048; min_data_in_leaf=6
+69 : y = 6.13e+07 : 441.5 secs : infill_ei
+Saved the current state after iteration 25 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  41     1320    54070216     54448144
+20240927.015841 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      728     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200917870776977      0.8999714
+00258884        2048    721     13101   1       61761047.976012 61761047.976012 41
+20240927.015842 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      728     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200917870776977      0.8999714
+00258884        2048    721     13101   1       61761047.976012 61761047.976012 41
+Fin EstimarGanancia_lightgbm()
+[mbo] 25: learning_rate=0.0201; feature_fraction=0.9; num_leaves=2048; min_data_in_leaf=7
+21 : y = 6.18e+07 : 412.6 secs : infill_ei
+Saved the current state after iteration 26 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  42     1450    53721799     54768315
+20240927.020526 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      853     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0202317240422737      0.8993748
+49729096        2048    765     12581   1       60791692.6536732        60791692.65367324
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 26: learning_rate=0.0202; feature_fraction=0.899; num_leaves=2048; min_data_in_leaf
+=765 : y = 6.08e+07 : 401.4 secs : infill_ei
+Saved the current state after iteration 27 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  43     1450    53721799     54768315
+20240927.021208 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      853     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0202317240422737      0.8993748
+49729096        2048    765     12581   1       60791692.6536732        60791692.65367324
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 27: learning_rate=0.0202; feature_fraction=0.899; num_leaves=2048; min_data_in_leaf
+=765 : y = 6.08e+07 : 400.1 secs : infill_ei
+Saved the current state after iteration 28 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  44     9070    52227190     52470339
+20240927.024506 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      8476    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200366663439307      0.5000213
+57513643        8       792     13600   1       60870344.8275862        60870344.82758624
+4
+Fin EstimarGanancia_lightgbm()
+[mbo] 28: learning_rate=0.02; feature_fraction=0.5; num_leaves=8; min_data_in_leaf=792 :
+y = 6.09e+07 : 1975.5 secs : infill_ei
+Saved the current state after iteration 29 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  45     1120    54229460     54714346
+20240927.025129 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      521     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200336543910175      0.5002873
+79609771        865     704     10904   1       61407580.2098951        61407580.20989514
+5
+Fin EstimarGanancia_lightgbm()
+[mbo] 29: learning_rate=0.02; feature_fraction=0.5; num_leaves=865; min_data_in_leaf=704
+: y = 6.14e+07 : 380.8 secs : infill_ei
+Saved the current state after iteration 30 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  46     1220    54008960     54636879
+20240927.025817 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      621     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200087746675722      0.5616744
+26882192        686     939     11382   1       61819697.1514243        61819697.15142434
+6
+20240927.025818 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      621     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200087746675722      0.5616744
+26882192        686     939     11382   1       61819697.1514243        61819697.15142434
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 30: learning_rate=0.02; feature_fraction=0.562; num_leaves=686; min_data_in_leaf=93
+9 : y = 6.18e+07 : 407.2 secs : infill_ei
+Saved the current state after iteration 31 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  47     2710    54197462     54812648
+20240927.031154 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2114    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200550558750377      0.5673117
+95457107        696     1015    15793   1       60253083.958021 60253083.958021 47
+Fin EstimarGanancia_lightgbm()
+[mbo] 31: learning_rate=0.0201; feature_fraction=0.567; num_leaves=696; min_data_in_leaf=
+1015 : y = 6.03e+07 : 813.4 secs : infill_ei
+Saved the current state after iteration 32 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  48     1380    52851871     54073489
+20240927.031955 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      929     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.069630821299049       0.5000164
+48495886        846     748     12203   1       58027161.9190405        58027161.91904054
+8
+Fin EstimarGanancia_lightgbm()
+[mbo] 32: learning_rate=0.0696; feature_fraction=0.5; num_leaves=846; min_data_in_leaf=74
+8 : y = 5.8e+07 : 478.8 secs : infill_ei
+Saved the current state after iteration 33 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  49     7490    51871390     52136556
+20240927.033051 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      6898    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200131635134197      0.6052390
+03586931        8       919     12701   1       60551572.7136432        60551572.71364324
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 33: learning_rate=0.02; feature_fraction=0.605; num_leaves=8; min_data_in_leaf=919
+: y = 6.06e+07 : 652.8 secs : infill_ei
+Saved the current state after iteration 34 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  50     1850    53285879     53616678
+20240927.033548 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1254    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0201584335407216      0.8999492
+43755315        74      1130    11576   1       62188221.8890555        62188221.88905555
+0
+20240927.033549 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1254    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0201584335407216      0.8999492
+43755315        74      1130    11576   1       62188221.8890555        62188221.88905555
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 34: learning_rate=0.0202; feature_fraction=0.9; num_leaves=74; min_data_in_leaf=113
+0 : y = 6.22e+07 : 296.4 secs : infill_ei
+Saved the current state after iteration 35 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  51     3300    53021942     53090001
+20240927.034145 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2705    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200443327581209      0.8999754
+73959616        28      1032    12365   1       60217923.5382309        60217923.53823095
+1
+Fin EstimarGanancia_lightgbm()
+[mbo] 35: learning_rate=0.02; feature_fraction=0.9; num_leaves=28; min_data_in_leaf=1032
+: y = 6.02e+07 : 353.3 secs : infill_ei
+Saved the current state after iteration 36 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  52     1710    54446669     54958559
+20240927.034845 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1116    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200211024914838      0.8997163
+84079089        664     1000    14622   1       60637388.3058471        60637388.30584715
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 36: learning_rate=0.02; feature_fraction=0.9; num_leaves=664; min_data_in_leaf=1000
+ : y = 6.06e+07 : 417.2 secs : infill_ei
+Saved the current state after iteration 37 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  53     5350    54040948     54294927
+20240927.040903 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      4756    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200187167108548      0.5055624
+01166743        31      103     12110   1       59260164.9175412        59260164.91754125
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 37: learning_rate=0.02; feature_fraction=0.506; num_leaves=31; min_data_in_leaf=103
+ : y = 5.93e+07 : 1215.6 secs : infill_ei
+Saved the current state after iteration 38 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  54     430    48274703     52056307
+20240927.041009 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      17      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.274166592665135       0.8998925
+07147987        2048    9999    14031   1       57265860.5697151        57265860.56971515
+4
+Fin EstimarGanancia_lightgbm()
+[mbo] 38: learning_rate=0.274; feature_fraction=0.9; num_leaves=2048; min_data_in_leaf=99
+99 : y = 5.73e+07 : 63.8 secs : infill_ei
+Saved the current state after iteration 39 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  55     4120    51868958     52143396
+20240927.041705 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      3530    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200287257006316      0.8994118
+03128924        18      1988    12434   1       61997850.0749625        61997850.07496255
+5
+Fin EstimarGanancia_lightgbm()
+[mbo] 39: learning_rate=0.02; feature_fraction=0.899; num_leaves=18; min_data_in_leaf=198
+8 : y = 6.2e+07 : 413.3 secs : infill_ei
+Saved the current state after iteration 40 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  56     5530    51602946     51659421
+20240927.042459 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      4937    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200362707878526      0.8178342
+03697398        9       1991    12524   1       60750698.6506747        60750698.65067475
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 40: learning_rate=0.02; feature_fraction=0.818; num_leaves=9; min_data_in_leaf=1991
+ : y = 6.08e+07 : 472.3 secs : infill_ei
+Saved the current state after iteration 41 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  57     3550    51735381     51855804
+20240927.043043 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2956    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200311744514604      0.8996222
+25668511        16      1917    12888   1       61157469.2653673        61157469.26536735
+7
+Fin EstimarGanancia_lightgbm()
+[mbo] 41: learning_rate=0.02; feature_fraction=0.9; num_leaves=16; min_data_in_leaf=1917
+: y = 6.12e+07 : 341.3 secs : infill_ei
+Saved the current state after iteration 42 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  58     1850    51406204     52178630
+20240927.043443 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1252    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200363738573107      0.8998024
+58345013        39      1812    12509   1       61536508.2458771        61536508.24587715
+8
+Fin EstimarGanancia_lightgbm()
+[mbo] 42: learning_rate=0.02; feature_fraction=0.9; num_leaves=39; min_data_in_leaf=1812
+: y = 6.15e+07 : 237.4 secs : infill_ei
+Saved the current state after iteration 43 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  59     1850    51406204     52178630
+20240927.043839 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1252    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200363738573107      0.8998024
+58345013        39      1812    12509   1       61536508.2458771        61536508.24587715
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 43: learning_rate=0.02; feature_fraction=0.9; num_leaves=39; min_data_in_leaf=1812
+: y = 6.15e+07 : 234.3 secs : infill_ei
+Saved the current state after iteration 44 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  60     2640    52286829     52533612
+20240927.044727 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2041    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200720953672157      0.8999837
+67382859        329     1776    13128   1       60884245.8770615        60884245.87706156
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 44: learning_rate=0.0201; feature_fraction=0.9; num_leaves=329; min_data_in_leaf=17
+76 : y = 6.09e+07 : 525.0 secs : infill_ei
+Saved the current state after iteration 45 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  61     6210    52075535     52128447
+20240927.045629 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      5614    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0202658458602868      0.8999616
+19571385        11      1770    12017   1       60575026.9865067        60575026.98650676
+1
+Fin EstimarGanancia_lightgbm()
+[mbo] 45: learning_rate=0.0203; feature_fraction=0.9; num_leaves=11; min_data_in_leaf=177
+0 : y = 6.06e+07 : 539.1 secs : infill_ei
+Saved the current state after iteration 46 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  62     3300    51150922     51338546
+20240927.050107 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2813    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0427952515863874      0.8998066
+03511635        8       2007    13149   1       60710541.2293853        60710541.22938536
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 46: learning_rate=0.0428; feature_fraction=0.9; num_leaves=8; min_data_in_leaf=2007
+ : y = 6.07e+07 : 275.9 secs : infill_ei
+Saved the current state after iteration 47 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  63     1940    52302274     52305613
+20240927.050701 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1345    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200195468990926      0.6773666
+65979952        106     1622    11602   1       60866623.6881559        60866623.68815596
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 47: learning_rate=0.02; feature_fraction=0.677; num_leaves=106; min_data_in_leaf=16
+22 : y = 6.09e+07 : 351.9 secs : infill_ei
+Saved the current state after iteration 48 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  64     710    49496976     51805048
+20240927.051123 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      296     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.192509646100149       0.5001048
+10492408        2048    441     16438   1       55278083.958021 55278083.958021 64
+Fin EstimarGanancia_lightgbm()
+[mbo] 48: learning_rate=0.193; feature_fraction=0.5; num_leaves=2048; min_data_in_leaf=44
+1 : y = 5.53e+07 : 259.2 secs : infill_ei
+Saved the current state after iteration 49 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  65     920    51879666     53134831
+20240927.051519 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      478     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0834335128045716      0.8999723
+66649003        1942    1011    12274   1       59749574.2128936        59749574.21289366
+5
+Fin EstimarGanancia_lightgbm()
+[mbo] 49: learning_rate=0.0834; feature_fraction=0.9; num_leaves=1942; min_data_in_leaf=1
+011 : y = 5.97e+07 : 234.0 secs : infill_ei
+Saved the current state after iteration 50 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  66     2620    52300969     53232246
+20240927.052424 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      2028    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200327396932407      0.8999805
+20674533        378     1610    11985   1       59947548.7256372        59947548.72563726
+6
+Fin EstimarGanancia_lightgbm()
+[mbo] 50: learning_rate=0.02; feature_fraction=0.9; num_leaves=378; min_data_in_leaf=1610
+ : y = 5.99e+07 : 542.9 secs : infill_ei
+Saved the current state after iteration 51 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  67     7220    51691511     51799607
+20240927.054943 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      6626    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200130950398312      0.5518869
+27552997        8       1890    12198   1       61137814.0929535        61137814.09295356
+7
+Fin EstimarGanancia_lightgbm()
+[mbo] 51: learning_rate=0.02; feature_fraction=0.552; num_leaves=8; min_data_in_leaf=1890
+ : y = 6.11e+07 : 1516.0 secs : infill_ei
+Saved the current state after iteration 52 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  68     2020    51652189     51781463
+20240927.055826 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1426    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200378420076756      0.5610048
+067386  87      1746    12796   1       62174758.6206897        62174758.6206897        6
+8
+Fin EstimarGanancia_lightgbm()
+[mbo] 52: learning_rate=0.02; feature_fraction=0.561; num_leaves=87; min_data_in_leaf=174
+6 : y = 6.22e+07 : 521.0 secs : infill_ei
+Saved the current state after iteration 53 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  69     7000    52297699     52432067
+20240927.062144 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      6407    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200232454118559      0.5599981
+76639308        10      1860    12831   1       61625620.6896552        61625620.68965526
+9
+Fin EstimarGanancia_lightgbm()
+[mbo] 53: learning_rate=0.02; feature_fraction=0.56; num_leaves=10; min_data_in_leaf=1860
+ : y = 6.16e+07 : 1395.9 secs : infill_ei
+Saved the current state after iteration 54 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  70     7000    52297699     52432067
+20240927.064458 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      6407    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200232454118559      0.5599981
+76639308        10      1860    12831   1       61625620.6896552        61625620.68965527
+0
+Fin EstimarGanancia_lightgbm()
+[mbo] 54: learning_rate=0.02; feature_fraction=0.56; num_leaves=10; min_data_in_leaf=1860
+ : y = 6.16e+07 : 1391.9 secs : infill_ei
+Saved the current state after iteration 55 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  71     7000    52297699     52432067
+20240927.070810 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      6407    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200232454118559      0.5599981
+76639308        10      1860    12831   1       61625620.6896552        61625620.68965527
+1
+Fin EstimarGanancia_lightgbm()
+[mbo] 55: learning_rate=0.02; feature_fraction=0.56; num_leaves=10; min_data_in_leaf=1860
+ : y = 6.16e+07 : 1389.1 secs : infill_ei
+Saved the current state after iteration 56 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  72     920    49875219     51235576
+20240927.071025 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      509     1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.200923719616964       0.8529160
+53751889        31      7090    12253   1       58171674.6626687        58171674.66266877
+2
+Fin EstimarGanancia_lightgbm()
+[mbo] 56: learning_rate=0.201; feature_fraction=0.853; num_leaves=31; min_data_in_leaf=70
+90 : y = 5.82e+07 : 132.5 secs : infill_ei
+Saved the current state after iteration 57 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  73     470    51456304     52531768
+20240927.071233 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      26      1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0755089506670883      0.5409840
+61250064        1540    6920    15122   1       53002875.5622189        53002875.56221897
+3
+Fin EstimarGanancia_lightgbm()
+[mbo] 57: learning_rate=0.0755; feature_fraction=0.541; num_leaves=1540; min_data_in_leaf
+=6920 : y = 5.3e+07 : 125.7 secs : infill_ei
+Saved the current state after iteration 58 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  74     9120    52111369     52224853
+20240927.074325 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      8529    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200172668902819      0.5562793
+4944012 8       1837    11952   1       61009787.1064468        61009787.1064468        7
+4
+Fin EstimarGanancia_lightgbm()
+[mbo] 58: learning_rate=0.02; feature_fraction=0.556; num_leaves=8; min_data_in_leaf=1837
+ : y = 6.1e+07 : 1850.0 secs : infill_ei
+Saved the current state after iteration 59 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  75     4370    51979403     52000942
+20240927.075726 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      3778    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200547950684652      0.5645732
+18023536        12      1808    11991   1       61092487.2563718        61092487.25637187
+5
+Fin EstimarGanancia_lightgbm()
+[mbo] 59: learning_rate=0.0201; feature_fraction=0.565; num_leaves=12; min_data_in_leaf=1
+808 : y = 6.11e+07 : 838.5 secs : infill_ei
+Saved the current state after iteration 60 in the file bayesiana.RDATA.
+Inicio EstimarGanancia_lightgbm()
+Validate  76     2050    53032637     53237654
+20240927.080727 1115    301025  gbdt    binary  custom  TRUE    TRUE    FALSE   TRUE    -
+100     -1      0       0.001   0       0       31      1452    1       1       1       F
+ALSE    1       0.1     50      0.5     FALSE   514229  0.0200078555465342      0.5420341
+29316754        122     1778    12395   1       62126664.167916 62126664.167916 76
+Fin EstimarGanancia_lightgbm()
+[mbo] 60: learning_rate=0.02; feature_fraction=0.542; num_leaves=122; min_data_in_leaf=17
+78 : y = 6.21e+07 : 598.6 secs : infill_ei
+Saved the final state in the file bayesiana.RDATA
+Saved the final state in the file bayesiana.RDATA
+Warning message:
+`as_integer()` is deprecated as of rlang 0.4.0
+Please use `vctrs::vec_cast()` instead.
+This warning is displayed once every 8 hours.
+[1] TRUE
+fin del programa
+Verificando archivo : BO_log.txt
+z2201_HT_lightgbm_gan.r  END
+./run.sh: line 9: 24670 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (24670) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92852}
+exp_correr_script() env_up$param_local$lastexp =  HT-0001
+imprimo  env_up1
+[1] "pinputexps" "ranks"      "qsemillas"
+imprimo  env_up2
+[1] "ht"          "ts9"         "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  HT-0001
+existe pinputexps en  env_up1
+pinputexps largo=  2  ; nchar=  7 7  ; vacio=  FALSE FALSE  ; valor=  HT-0001 TS-0001
+[1] "pinputexps" "ranks"      "qsemillas"
+env_up2$param_local$instruction =  9
+exp_correr_script()  START
+candidatos =  0 0 0 0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  009-FM_final_models_lightgbm ~/buckets/b1/expw/FM-0001
+20240927.080744 9       actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/FM-0001        FM_final_models_lightgbm
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  FM-0001
+expw/FM-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: primes
+Loading required package: lightgbm
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z2301_FM_final_models_lightgbm.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+Verificando archivo : ./HT-0001/BO_log.txt
+lectura dataset_train_final.csv.gz
+Verificando archivo : ./TS-0001/dataset_train_final.csv.gz
+
+modelo_rank:  1 , semillas: creo lgb.Dataset
+1
+entrenando modelo =  1   . ...Fin.2
+entrenando modelo =  2   . ...Fin.3
+entrenando modelo =  3   . ...Fin.4
+entrenando modelo =  4   . ...Fin.5
+entrenando modelo =  5   . ...Fin.grabar metadata
+fin del programa
+z2301_FM_final_models_lightgbm.r  END
+./run.sh: line 9: 687976 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (687976) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92856}
+exp_correr_script() env_up$param_local$lastexp =  FM-0001
+imprimo  env_up1
+[1] "pinputexps"
+imprimo  env_up2
+[1] "fm"          "ht"          "ts9"         "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  FM-0001
+existe pinputexps en  env_up1
+pinputexps largo=  2  ; nchar=  7 7  ; vacio=  FALSE FALSE  ; valor=  FM-0001 TS-0001
+[1] "pinputexps"
+env_up2$param_local$instruction =  10
+exp_correr_script()  START
+candidatos =  0 0 0 0 0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  010-SC_scoring ~/buckets/b1/expw/SC-0001
+20240927.084630 10      actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/SC-0001        SC_scoring
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  SC-0001
+expw/SC-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: lightgbm
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: ulimit
+z2401_SC_scoring.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+Verificando archivo : ./FM-0001/tb_modelos.txt
+lectura dataset_future.csv.gz
+
+modelo_rank:  1 , isem:  1
+creo predict
+
+modelo_rank:  1 , isem:  2
+creo predict
+
+modelo_rank:  1 , isem:  3
+creo predict
+
+modelo_rank:  1 , isem:  4
+creo predict
+
+modelo_rank:  1 , isem:  5
+creo predict
+grabar metadata
+fin del programa
+z2401_SC_scoring.r  END
+./run.sh: line 9: 688838 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (688838) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92857}
+exp_correr_script() env_up$param_local$lastexp =  SC-0001
+imprimo  env_up1
+[1] "pinputexps"
+imprimo  env_up2
+[1] "fm"          "ht"          "ts9"         "param_local" "pnombrewf"
+output$expenv$nombrewf  =  wf_septiembre-001
+exp_init()  env_up2$param_local$lastexp  =  SC-0001
+existe pinputexps en  env_up1
+pinputexps largo=  1  ; nchar=  0  ; vacio=  TRUE  ; valor=
+[1] "pinputexps"
+env_up2$param_local$instruction =  11
+exp_correr_script()  START
+candidatos =  0 0 0 0 0 0 0 0 0 0
+exp_buscar_experimento()
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+---------
+exp_correr_script() busqueda
+$encontre
+[1] FALSE
+
+$Rend
+[1] FALSE
+
+$bypass
+[1] FALSE
+
+$resume
+[1] FALSE
+
+$folder
+[1] ""
+
+exp_correr_script() encontre1
+exp_correr_script() encontre2
+crear_experimento_nuevo() START
+generar_experimento_nombre() START
+generar_experimento_nombre() END
+crear_experimento_nuevo()  011-KA_evaluate_kaggle ~/buckets/b1/expw/KA-0001
+20240927.084737 11      actual_run      ~/buckets/b1/flow/wf_septiembre-001     ~/buckets
+/b1/expw/KA-0001        KA_evaluate_kaggle
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/expw/
+pnombrewf =  KA-0001
+expw/KA-0001
+exp_gc_shutdown()  END
+         used (Mb) gc trigger (Mb) max used (Mb)
+Ncells 294428 15.8     692348   37   478249 25.6
+Vcells 510705  3.9    8388608   64  1923774 14.7
+Loading required package: data.table
+Loading required package: yaml
+Loading required package: rlang
+
+Attaching package: ‘rlang’
+
+The following object is masked from ‘package:data.table’:
+
+    :=
+
+Loading required package: rlist
+Loading required package: mlflow
+Loading required package: digest
+Loading required package: ulimit
+z2601_KA_evaluate_kaggle.r  START
+Verificando archivo : parametros.yml
+Inicio del programa
+lectura tb_future_prediccion.txt
+Verificando archivo : ./SC-0001/tb_future_prediccion.txt
+lectura tb_predicciones.txt
+Verificando archivo : ./SC-0001/tb_predicciones.txt
+1 1
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.80MB/s]
+res=  56.697000
+20240927.084750 1       50      1       173249  9000    56.697  56.697
+Experiment `/futu-c20548` does not exist. Creating a new experiment.
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.84MB/s]
+res=  57.267000
+20240927.084759 1       50      1       173249  9500    57.267  57.267
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.78MB/s]
+res=  56.527000
+20240927.084807 1       50      1       173249  10000   56.527  56.527
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.71MB/s]
+res=  56.727000
+20240927.084815 1       50      1       173249  10500   56.727  56.727
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.88MB/s]
+res=  58.087000
+20240927.084823 1       50      1       173249  11000   58.087  58.087
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.81MB/s]
+res=  57.327000
+20240927.084831 1       50      1       173249  11500   57.327  57.327
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.78MB/s]
+res=  57.777000
+20240927.084840 1       50      1       173249  12000   57.777  57.777
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.81MB/s]
+res=  57.087000
+20240927.084848 1       50      1       173249  12500   57.087  57.087
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_1 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.85MB/s]
+res=  56.517000
+20240927.084856 1       50      1       173249  13000   56.517  56.517
+1 2
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 3.06MB/s]
+res=  58.207000
+20240927.084905 1       50      1       132967  9000    58.207  58.207
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.74MB/s]
+res=  58.677000
+20240927.084913 1       50      1       132967  9500    58.677  58.677
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.90MB/s]
+res=  58.127000
+20240927.084921 1       50      1       132967  10000   58.127  58.127
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.71MB/s]
+res=  57.407000
+20240927.084929 1       50      1       132967  10500   57.407  57.407
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.78MB/s]
+res=  56.977000
+20240927.084937 1       50      1       132967  11000   56.977  56.977
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.81MB/s]
+res=  57.107000
+20240927.084945 1       50      1       132967  11500   57.107  57.107
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.78MB/s]
+res=  56.817000
+20240927.084953 1       50      1       132967  12000   56.817  56.817
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.92MB/s]
+res=  57.477000
+20240927.085001 1       50      1       132967  12500   57.477  57.477
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_2 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.84MB/s]
+res=  56.837000
+20240927.085010 1       50      1       132967  13000   56.837  56.837
+1 3
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.82MB/s]
+res=  58.697000
+20240927.085018 1       50      1       677041  9000    58.697  58.697
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.84MB/s]
+res=  59.277000
+20240927.085027 1       50      1       677041  9500    59.277  59.277
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.79MB/s]
+res=  59.187000
+20240927.085035 1       50      1       677041  10000   59.187  59.187
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.72MB/s]
+res=  58.827000
+20240927.085043 1       50      1       677041  10500   58.827  58.827
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.81MB/s]
+res=  58.177000
+20240927.085051 1       50      1       677041  11000   58.177  58.177
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.74MB/s]
+res=  58.437000
+20240927.085059 1       50      1       677041  11500   58.437  58.437
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.97MB/s]
+res=  58.447000
+20240927.085108 1       50      1       677041  12000   58.447  58.447
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.90MB/s]
+res=  57.697000
+20240927.085116 1       50      1       677041  12500   57.697  57.697
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_3 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.83MB/s]
+res=  57.387000
+20240927.085124 1       50      1       677041  13000   57.387  57.387
+1 4
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.94MB/s]
+res=  57.627000
+20240927.085133 1       50      1       558587  9000    57.627  57.627
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.83MB/s]
+res=  57.667000
+20240927.085141 1       50      1       558587  9500    57.667  57.667
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.67MB/s]
+res=  58.007000
+20240927.085149 1       50      1       558587  10000   58.007  58.007
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.82MB/s]
+res=  57.787000
+20240927.085157 1       50      1       558587  10500   57.787  57.787
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.72MB/s]
+res=  56.587000
+20240927.085205 1       50      1       558587  11000   56.587  56.587
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.88MB/s]
+res=  56.777000
+20240927.085213 1       50      1       558587  11500   56.777  56.777
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.84MB/s]
+res=  57.217000
+20240927.085221 1       50      1       558587  12000   57.217  57.217
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.94MB/s]
+res=  57.677000
+20240927.085229 1       50      1       558587  12500   57.677  57.677
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_4 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.88MB/s]
+res=  57.317000
+20240927.085237 1       50      1       558587  13000   57.317  57.317
+1 5
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.80MB/s]
+res=  58.597000
+20240927.085246 1       50      1       320273  9000    58.597  58.597
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.86MB/s]
+res=  58.297000
+20240927.085254 1       50      1       320273  9500    58.297  58.297
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.73MB/s]
+res=  58.097000
+20240927.085302 1       50      1       320273  10000   58.097  58.097
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.80MB/s]
+res=  57.677000
+20240927.085311 1       50      1       320273  10500   57.677  57.677
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.88MB/s]
+res=  58.957000
+20240927.085319 1       50      1       320273  11000   58.957  58.957
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.97MB/s]
+res=  58.697000
+20240927.085327 1       50      1       320273  11500   58.697  58.697
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.75MB/s]
+res=  57.887000
+20240927.085335 1       50      1       320273  12000   57.887  57.887
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.80MB/s]
+res=  56.697000
+20240927.085343 1       50      1       320273  12500   56.697  56.697
+write prediccion Kaggle
+Columnas del dataset:  numero_de_cliente m_1_5 Predicted
+written prediccion Kaggle
+100%|██████████| 1.79M/1.79M [00:00<00:00, 2.84MB/s]
+res=  55.547000
+20240927.085351 1       50      1       320273  13000   55.547  55.547
+20240927.085353 1       50      5       -1      9000    57.965  57.965
+20240927.085355 1       50      5       -1      9500    58.237  58.237
+20240927.085357 1       50      5       -1      10000   57.989  57.989
+20240927.085359 1       50      5       -1      10500   57.685  57.685
+20240927.085400 1       50      5       -1      11000   57.757  57.757
+20240927.085402 1       50      5       -1      11500   57.669  57.669
+20240927.085404 1       50      5       -1      12000   57.629  57.629
+20240927.085406 1       50      5       -1      12500   57.327  57.327
+20240927.085408 1       50      5       -1      13000   56.721  56.721
+Warning message:
+`as_integer()` is deprecated as of rlang 0.4.0
+Please use `vctrs::vec_cast()` instead.
+This warning is displayed once every 8 hours.
+fin del programa
+Verificando archivo : tb_ganancias.txt
+z2601_KA_evaluate_kaggle.r  END
+./run.sh: line 9: 688907 Segmentation fault      (core dumped) ~/install/memcpu
+./run.sh: line 12: kill: (688907) - No such process
+exp_gc_shutdown()  START
+pbucket_dir =  ~/buckets/b1
+pwf_dir =  ~/buckets/b1/flow/
+pnombrewf =  ~/buckets/b1/flow/wf_septiembre-001
+flow/wf_septiembre-001
+exp_gc_shutdown()  END
+{"result":"success","msg":"","id":92858}
+exp_correr_script() env_up$param_local$lastexp =  KA-0001
+exp_wf_end() fm ht ts9 param_local pnombrewf
+[1] "KA-0001"
+Warning message:
+`as_integer()` is deprecated as of rlang 0.4.0
+Please use `vctrs::vec_cast()` instead.
+This warning is displayed once every 8 hours.
+luviola@fantasmita128:~/dm2024c/src/workflows$ git add .
+luviola@fantasmita128:~/dm2024c/src/workflows$ git commit -m "first workflow run!"
+[fantasmita128 3d8dc24] first workflow run!
+ 2 files changed, 492 insertions(+)
+ create mode 100644 src/workflows/502_run_workflow_vivencial.r
+ create mode 100644 src/workflows/529_workflow_base_f202109_viv.r
+luviola@fantasmita128:~/dm2024c/src/workflows$ git push
+fatal: The current branch fantasmita128 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin fantasmita128
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+luviola@fantasmita128:~/dm2024c/src/workflows$ git push --set-upstream origin fantasmita1
+2
+error: src refspec fantasmita12 does not match any
+error: failed to push some refs to 'https://github.com/luviolap/dm2024c.git'
+luviola@fantasmita128:~/dm2024c/src/workflows$ git push --set-upstream origin fantasmita1
+28
+Enumerating objects: 17, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (8/8), 1.26 KiB | 1.26 MiB/s, done.
+Total 8 (delta 4), reused 1 (delta 1), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+remote:
+remote: Create a pull request for 'fantasmita128' on GitHub by visiting:
+remote:      https://github.com/luviolap/dm2024c/pull/new/fantasmita128
+remote:
+To https://github.com/luviolap/dm2024c.git
+ * [new branch]      fantasmita128 -> fantasmita128
+branch 'fantasmita128' set up to track 'origin/fantasmita128'.
+luviola@fantasmita128:~/dm2024c/src/workflows$ tmux ls
+workflow: 1 windows (created Thu Sep 26 22:01:28 2024) (attached)
+luviola@fantasmita128:~/dm2024c/src/workflows$
