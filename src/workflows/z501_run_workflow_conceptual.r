@@ -6,7 +6,7 @@ PARAM <- "src/workflows/z519_workflow_base_f202109_conc.r"
 envg <- env()
 
 envg$EXPENV <- list()
-envg$EXPENV$repo_dir <- "~/labo2024ba/"
+envg$EXPENV$repo_dir <- "~/dm2024c/"
 
 #------------------------------------------------------------------------------
 
