@@ -1,0 +1,143 @@
+# expw
+
+1. DT-0001/ (Data Incorporation):
+   - dataset.csv.gz: The initial dataset
+   - dataset_metadata.yml: Initial metadata about the dataset
+   - dataset.campos.txt: Information about initial dataset fields
+   - OUTPUT.yml: Output metrics and information from this step
+
+2. CA-0001/ (Catastrophe Analysis):
+   - dataset.csv.gz: Dataset with catastrophe analysis applied
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Output metrics and information from this step
+
+3. FEintra-0001/ (Feature Engineering - Intra-month):
+   - dataset.csv.gz: Dataset with new manual intra-month features
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Output metrics and information from this step
+
+4. DR-0001/ (Data Drifting):
+   - dataset.csv.gz: Dataset with drift correction applied
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Output metrics and information from this step
+
+5. FEhist-0001/ (Feature Engineering - Historical):
+   - dataset.csv.gz: Dataset with historical features added
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Output metrics and information from this step
+
+6. FErf-0001/ (Feature Engineering - Random Forest):
+   - dataset.csv.gz: Dataset with random forest derived features
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - modelo.model: LightGBM model file used for feature generation
+   - OUTPUT.yml: Output metrics and information from this step
+
+7. TS-0001/ (Training Strategy):
+   - dataset_future.csv.gz: Future dataset for predictions
+   - dataset_train_final.csv.gz: Final training dataset
+   - dataset_training.csv.gz: Dataset for hyperparameter tuning
+   - dataset_metadata.yml: Final metadata
+   - dataset_training.campos.txt: Final field information
+   - OUTPUT.yml: Output metrics and information from this step
+
+8. HT-0001/ (Hyperparameter Tuning):
+   - BO_log.txt: Bayesian optimization log
+   - BO_log_mejor.txt: Log of best Bayesian optimization results
+   - impo_*.txt: Feature importance files for different iterations
+   - bayesiana.RDATA: R data file for resuming Bayesian optimization
+   - OUTPUT.yml: Output metrics and information from this step
+
+9. FM-0001/ (Final Models):
+   - modelo_*.model: LightGBM model files for different ranks/seeds
+   - impo_*.txt: Feature importance files for best models
+   - tb_modelos.txt: Table with information about trained models
+   - OUTPUT.yml: Output metrics and information from this step
+
+10. SC-0001/ (Scoring):
+    - tb_predicciones.txt: Table with prediction information
+    - tb_future_prediccion.txt: Predictions on the future dataset
+    - OUTPUT.yml: Output metrics and information from this step
+
+11. KA-0001/ (Kaggle Evaluation):
+    - ganancias_log.txt: Log of gains for different models/iterations
+    - tb_ganancias.txt: Table with detailed gain information
+    - *.pdf: Plot files showing gains for different models
+    - *.csv: Kaggle submission files (if competition parameter is set)
+    - OUTPUT.yml: Output metrics and information from this step
+
+# flow
+
+1. 001-DT_incorporar_dataset_competencia2024/
+   - dataset.csv.gz: The incorporated dataset
+   - dataset_metadata.yml: Metadata about the dataset
+   - dataset.campos.txt: Information about dataset fields
+   - OUTPUT.yml: Metrics and information from this step
+
+2. 002-CA_catastrophe_base/
+   - dataset.csv.gz: Dataset with catastrophe analysis applied
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Metrics and information from this step
+
+3. 003-FEintra_manual_base/
+   - dataset.csv.gz: Dataset with new manual intra-month features
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Metrics and information from this step
+
+4. 004-DR_drifting_base/
+   - dataset.csv.gz: Dataset with drift correction applied
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Metrics and information from this step
+
+5. 005-FEhist_base/
+   - dataset.csv.gz: Dataset with historical features added
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - OUTPUT.yml: Metrics and information from this step
+
+6. 006-FErf_attributes_base/
+   - dataset.csv.gz: Dataset with random forest derived features
+   - dataset_metadata.yml: Updated metadata
+   - dataset.campos.txt: Updated field information
+   - modelo.model: LightGBM model file used for feature generation
+   - OUTPUT.yml: Metrics and information from this step
+
+7. 007-TS_strategy_base9/
+   - dataset_future.csv.gz: Future dataset for predictions
+   - dataset_train_final.csv.gz: Final training dataset
+   - dataset_training.csv.gz: Dataset for hyperparameter tuning
+   - dataset_metadata.yml: Final metadata
+   - dataset_training.campos.txt: Final field information
+   - OUTPUT.yml: Metrics and information from this step
+
+8. 008-HT_tuning_base/
+   - BO_log.txt: Bayesian optimization log
+   - BO_log_mejor.txt: Log of best Bayesian optimization results
+   - impo_*.txt: Feature importance files for different iterations
+   - bayesiana.RDATA: R data file for resuming Bayesian optimization
+   - OUTPUT.yml: Metrics and information from this step
+
+9. 009-FM_final_models_lightgbm/
+   - modelo_*.model: LightGBM model files for different ranks/seeds
+   - impo_*.txt: Feature importance files for best models
+   - tb_modelos.txt: Table with information about trained models
+   - OUTPUT.yml: Metrics and information from this step
+
+10. 010-SC_scoring/
+    - tb_predicciones.txt: Table with prediction information
+    - tb_future_prediccion.txt: Predictions on the future dataset
+    - OUTPUT.yml: Metrics and information from this step
+
+11. 011-KA_evaluate_kaggle/
+    - ganancias_log.txt: Log of gains for different models/iterations
+    - tb_ganancias.txt: Table with detailed gain information
+    - *.pdf: Plot files showing gains for different models
+    - *.csv: Kaggle submission files (if competition parameter is set)
+    - OUTPUT.yml: Metrics and information from this step

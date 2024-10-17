@@ -1,0 +1,30 @@
+1. Dataset Incorporation and Preprocessing:
+   - `wf_septiembre-001/001-DT_incorporar_dataset_competencia2024/dataset.campos.txt`
+   - `wf_septiembre-001/002-CA_catastrophe_base/dataset.campos.txt`
+   - `wf_septiembre-001/003-FEintra_manual_base/dataset.campos.txt`
+   - `wf_septiembre-001/004-DR_drifting_base/dataset.campos.txt`
+
+2. Feature Engineering:
+   - `wf_septiembre-001/005-FEhist_base/dataset.campos.txt`
+   - `wf_septiembre-001/006-FErf_attributes_base/dataset.campos.txt`
+
+3. Training Strategy:
+   - `wf_septiembre-001/007-TS_strategy_base9/dataset_training.campos.txt`
+   - `wf_septiembre-001/007-TS_strategy_base9/dataset_train_final.csv.gz`
+
+4. Hyperparameter Tuning:
+   - `wf_septiembre-001/008-HT_tuning_base/BO_log.txt`
+   - `wf_septiembre-001/008-HT_tuning_base/BO_log_mejor.txt`
+
+5. Final Model:
+   - `wf_septiembre-001/009-FM_final_models_lightgbm/impo_01_050.txt`
+   - `wf_septiembre-001/009-FM_final_models_lightgbm/tb_modelos.txt`
+
+6. Scoring:
+   - `wf_septiembre-001/010-SC_scoring/tb_future_prediccion.txt`
+   - `wf_septiembre-001/010-SC_scoring/tb_predicciones.txt`
+
+7. Kaggle Evaluation:
+   - `wf_septiembre-001/011-KA_evaluate_kaggle/ganancias_log.txt`
+   - `wf_septiembre-001/011-KA_evaluate_kaggle/tb_ganancias.txt`
+   - `wf_septiembre-001/011-KA_evaluate_kaggle/modelo_01_050.pdf`
